@@ -61,5 +61,29 @@ def whdata_to_csv(whdata_excel_file_path: str) -> List[str]:
     y_train_df.to_csv(y_train_path, index=False)
     X_test_df.to_csv(X_test_path, index=False)
     y_test_df.to_csv(y_test_path, index=False)
-    
+
     return X_train_path, y_train_path, X_test_path, y_test_path
+
+def test_whdata_to_csv_Xtrain():
+    wh_data_path = 'WHR20_DataForTable2.1.xls'
+    X_train_path, _, _, _ = whdata_to_csv(wh_data_path)
+    X_train_df = pd.read_csv(X_train_path)
+    assert(X_train_df.shape[0] > 3)
+
+def test_whdata_to_csv_ytrain():
+    wh_data_path = 'WHR20_DataForTable2.1.xls'
+    _, y_train_path, _, _ = whdata_to_csv(wh_data_path)
+    y_train_df = pd.read_csv(y_train_path)
+    assert(y_train_df.shape[0] > 3)
+
+def test_whdata_to_csv_Xtest():
+    wh_data_path = 'WHR20_DataForTable2.1.xls'
+    _, _, X_test_path, _ = whdata_to_csv(wh_data_path)
+    X_test_df = pd.read_csv(X_test_path)
+    assert(X_test_df.shape[0] > 3)
+
+def test_whdata_to_csv_ytest():
+    wh_data_path = 'WHR20_DataForTable2.1.xls'
+    _, _, _, y_test_path = whdata_to_csv(wh_data_path)
+    y_test_df = pd.read_csv(y_test_path)
+    assert(y_test_df.shape[0] > 3)
