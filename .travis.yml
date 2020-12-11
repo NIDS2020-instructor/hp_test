@@ -22,3 +22,4 @@ install:
 
 script:
   - pytest happypred/happyio.py
+  - pytest happypred/happyml.py
