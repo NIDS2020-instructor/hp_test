@@ -69,4 +69,4 @@ def hwpredict(log_gdp: float, social: float, life_exp: float, freedom: float,
     return life_ladder
 
 def test_hwpredict():
-    assert 0 <= test_hwpredict(5, 0.5, 50, 0.5, 0.5,	0.5) <= 10
+    assert 0 <= hwpredict(5, 0.5, 50, 0.5, 0.5,	0.5) <= 10
