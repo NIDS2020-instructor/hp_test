@@ -16,7 +16,7 @@ install:
   # Useful for debugging any issues with conda
   - conda info -a
 
-  - conda create -q -n happy_test python=$TRAVIS_PYTHON_VERSION pandas xlrd scikit-learn
+  - conda create -q -n happy_test python=$TRAVIS_PYTHON_VERSION pytest pandas xlrd scikit-learn
   - conda activate happy_test
   - python setup.py install
 
