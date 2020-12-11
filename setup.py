@@ -11,7 +11,7 @@ setup(
     description = "Predict country happiness from World Happiness Report data",
     long_description = long_description,
     long_description_content_type = "text/markdown",
-    url = "https://github.com/NIDS2020-instructor/happiness_project",
+    url = "https://github.com/NIDS2020-instructor/wh_test",
     packages = find_packages(),
     classifiers = [
         "Programming Language :: Python :: 3",
